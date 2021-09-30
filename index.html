@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Black Goose Bakery :: main-page</title>
+<link href="styles.css" rel="stylesheet">
+<style>
+
+html {
+  box-sizing: border-box;
+}
+* {
+  box-sizing: inherit;
+}
+body {
+  font-family: Georgia, serif; 
+  font-size: 100%;
+  background-color: white;
+  margin: 0;
+}
+
+#layout {
+  margin-left: 5%;
+  margin-right: 5%;
+  display: grid;
+  grid-template-rows: 3em 20px [main-start] 150px auto 5em [main-end];
+  grid-template-columns:  [main-start] 1fr [main-end] repeat(3, 20px 150px); 
+}
+nav {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 8;
+} 
+#figA {
+  grid-area: 3 / 3 / 4 / 4;
+}
+#figB {
+  grid-area: 3 / 5 / 4 / 6;
+}
+#figC {
+  grid-row: 3 / 4;
+  grid-column: span 1 / -1;
+}
+
+
+main {
+  grid-area: main;
+}
+footer { 
+  grid-row: 5 / 6;
+  grid-column: 3 / -1;
+  } 
+
+a:link, a:visited { color: #DC6903; }
+a:focus, a:hover, a:active { color: #F9AB33; }
+
+a {
+  text-decoration: none;
+  border-bottom: 1px dotted;
+  padding-bottom: .2em;
+}
+
+nav, footer {
+  font-family: verdana, sans-serif;
+  background-color: #783F27;
+}
+nav ul li a:link, nav ul li a:visited {
+  color: #F9AB33;
+}
+nav ul li a:focus, nav ul li a:hover, nav ul li a:active {
+  color: #fff;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+nav ul li {
+  font-size: .8em;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+}
+nav ul li a {
+  display: block;
+  border: 1px solid;
+  border-radius: .5em;
+  padding: .5em 1em;
+  margin: .5em; 
+}
+
+main {
+  font-family: 'Stint Ultra Expanded', Georgia, serif;
+  background-color: white;
+  line-height: 1.8em;
+  color: #555;
+  padding: 1em;
+  border: double 4px #EADDC4;
+  border-radius: 25px;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  color: #EADDC4;
+  text-align: center;
+  font-size: .8em;
+  padding: .5em;
+}
+
+</style>
+</head>
+
+<body>
+<div id="layout">
+
+<nav>
+  <ul>
+    <li><a href="pages/bakery.html">Каталог</a></li>
+    <li><a href="pages/blog.html">Блог</a></li>
+    <li><a href="pages/about.html">О компании</a></li>
+    <li><a href="pages/contact.html">Обратная связь</a></li>
+  </ul>
+</nav>  
+
+<main>
+<img src="images/bgb_logo.png" alt="Black Goose Bakery"></p>
+<h2>Представляем: выпечка из всех уголков мира!</h2>
+<p>Кажется, что в каждом регионе мира есть свой особый взгляд на этот основной продукт
+  человечества. От хрустящих французских багетов до афганских лепешек и простого
+  хлеба на стол, представленного всевозможными формами и размерами.</p>
+<p>Каждый месяц мы предлагаем выпечку, которая является деликатесом определенной культуры
+  или ее части мира. Некоторые продукты изготовлены нашими пекарями, которые путешествуют
+  по миру, изучая местную рецептуру, другие же предствляют собой консервативность технологий
+  и неизменны из поколения в поколение.</p>
+
+<p>Если вы не можете добраться до магазина, многое из нашего ассортимента будет
+  доступно для заказа онлайн.</p>
+<p>Свежий, уникальный хлеб - одно из преимуществ и гордость Black Goose Bakery!</p>
+
+</main>
+
+
+<figure id="figA"><img src="images/uzbek_150.jpg"></figure>
+<figure id="figB"><img src="images/bread_150.jpg"></figure>
+<figure id="figC"><img src="images/braided_150.jpg"></figure>
+
+
+<footer>
+<p><strong>Black Goose Bakery</strong> | <br>
+Понедельник &ndash; Пятница: с 9:00 до 20:00 | Суббота &amp; Воскресенье: с 9:00 до 18:00</p>
+</footer>
+
+</div>
+</body>
+</html>
+
+
